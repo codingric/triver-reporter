@@ -15,6 +15,7 @@
 	<body>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
+        <div align="right">Logged in as <a href="/logout">{{.Username}}</a></div>
         <nav><a href="/">namespaces</a>/{{ .Namespace }}</nav>
         <h1>Reports for {{ .Namespace }}</h1>
         <table class="table table-bordered sortable">
@@ -24,7 +25,7 @@
         </tr>
 	{{range .Items}}
 		<tr>
-            <td><a href="/{{ .Namespace }}/{{ .Name }}">{{ .Image }}</a></td>
+            <td><a href="/n/{{ .Namespace }}/i/{{ .Name }}">{{ .Image }}</a></td>
             <td class="severity-CRITICAL">{{.Critical}}</td>
             <td class="severity-HIGH">{{.High}}</td>
             <td class="severity-MEDIUM">{{.Medium}}</td>

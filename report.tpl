@@ -15,7 +15,8 @@
 	<body>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
         <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
-        <nav><a href="/">namespaces</a>/<a href="/{{ .Namespace }}">{{ .Namespace }}</a>/{{.Name}}</nav>
+        <div align="right">Logged in as <a href="/logout">{{.Username}}</a></div>
+        <nav><a href="/">namespaces</a>/<a href="/n/{{ .Namespace }}">{{ .Namespace }}</a>/{{.Name}}</nav>
         <h1>{{ .Report.Artifact.Repository }}:{{ .Report.Artifact.Tag }}</h1>
         <h2>Summary</h2>
         <table class="table table-bordered">
